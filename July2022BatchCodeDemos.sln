@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab Documents", "Lab Docume
 		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 1\CSharp Programming - Venkat.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 1\CSharp Programming - Venkat.pdf
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs and Ref", "Labs and Ref\Labs and Ref.csproj", "{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{E2E19C31-CD1B-4733-A38B-77A2C44D1159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2E19C31-CD1B-4733-A38B-77A2C44D1159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2E19C31-CD1B-4733-A38B-77A2C44D1159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
