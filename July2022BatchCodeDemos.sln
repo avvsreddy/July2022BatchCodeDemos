@@ -7,20 +7,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstConsoleApp", "MyFirs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySecondConsoleApp", "MySecondConsoleApp\MySecondConsoleApp.csproj", "{DF4F4991-D741-4608-A613-30DD51FADAB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainerTraineeApp", "TrainerTraineeApp\TrainerTraineeApp.csproj", "{FD371A1D-94B1-4F2C-A67E-5DBE8E8AF3C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainerTraineeApp", "TrainerTraineeApp\TrainerTraineeApp.csproj", "{FD371A1D-94B1-4F2C-A67E-5DBE8E8AF3C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageFundamentals", "LanguageFundamentals\LanguageFundamentals.csproj", "{CCE53B73-35CE-490B-898E-3DA0489730DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageFundamentals", "LanguageFundamentals\LanguageFundamentals.csproj", "{CCE53B73-35CE-490B-898E-3DA0489730DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{03D1C8C3-9932-4B9A-8360-76DAA4450F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{03D1C8C3-9932-4B9A-8360-76DAA4450F60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{E2E19C31-CD1B-4733-A38B-77A2C44D1159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{E2E19C31-CD1B-4733-A38B-77A2C44D1159}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab Documents", "Lab Documents", "{2ADC8D55-25F3-49B2-B819-03EBC2491014}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 1\CSharp Programming - Venkat.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 1\CSharp Programming - Venkat.pdf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs and Ref", "Labs and Ref\Labs and Ref.csproj", "{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labs and Ref", "Labs and Ref\Labs and Ref.csproj", "{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceAndPolymorphism", "InheritanceAndPolymorphism\InheritanceAndPolymorphism.csproj", "{ED2E6610-EB25-4A8C-983C-7BABBCC3D1E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDEA005F-67C8-4F5A-A65A-558D0AE615E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2E6610-EB25-4A8C-983C-7BABBCC3D1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2E6610-EB25-4A8C-983C-7BABBCC3D1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2E6610-EB25-4A8C-983C-7BABBCC3D1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2E6610-EB25-4A8C-983C-7BABBCC3D1E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
