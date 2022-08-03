@@ -18,6 +18,31 @@ public class Company
     {
         double total = 0;
         // calculate
+
+        // for each customer
+        foreach (Customer customer in Customers)
+        {
+            // for each order
+            foreach (Order order in customer.Orders)
+            {
+                // for each ordered item
+                foreach (OrderedItem oItem in order.OrderedItems)
+                {
+                    total += oItem.Qty * oItem.Item.Rate;
+                }
+            }
+
+            if (customer is RegCustomer)
+            {
+                // down cast to access the discount
+                RegCustomer reg = customer as RegCustomer;
+                double totDiscount = 0;
+                totDiscount = reg.Discount * total / 100;
+
+                total = total - totDiscount;
+            }
+        }
+
         return total;
     }
 }
