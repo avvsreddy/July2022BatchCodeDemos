@@ -9,7 +9,7 @@ namespace Test
             //p.age = 200;
             //p.SetAge(200);
             //int a = p.GetAge();
-            p.Age = 20;
+            //p.Age = 20;
             int a = p.Age;
 
 
@@ -70,7 +70,7 @@ namespace Test
 
         public void SomeMethod()
         {
-            Age = 32;
+            //Age = 32;
             age = 32;
         }
     }
@@ -113,5 +113,4 @@ class Product
         Price = 100;
 
     }
-}
 }

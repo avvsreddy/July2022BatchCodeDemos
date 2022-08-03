@@ -20,10 +20,10 @@ class Program
         //p.Name = "IPhone X";
         //p.Price = 90000;
 
-        Product p2 = new Product { Name = "IWatch" };
-        Product p3 = new Product { Id = 222 };
-        Product p33 = new Product { Id = 234, Name = "Abc" };
-        Product p4 = new Product { Price = 80000, Name = "Xyz" };
+        //Product p2 = new Product { Name = "IWatch" };
+        //Product p3 = new Product { Id = 222 };
+        //Product p33 = new Product { Id = 234, Name = "Abc" };
+        //Product p4 = new Product { Price = 80000, Name = "Xyz" };
 
     }
 }
