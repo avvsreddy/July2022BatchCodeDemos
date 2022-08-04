@@ -1,28 +1,26 @@
-﻿using System;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            //p.Id = 100;
-            Person p = new Person { Id = 111 };
-            p.Name = "abc";
-            //p.Id = 222;
-            Console.WriteLine(p.Id);
-            Console.WriteLine(p.Name);
+            B b = new B();
+            b.B1();
         }
     }
-    class Person
-    {
-        public int Id { get; init; }
-        public string Name { get; set; }
 
-        //public Person(int id)
-        //{
-        //    Id = id;
-        //}
+    public class A
+    {
+        public void A1() { }
+        public void A2() { }
+    }
+
+    public class B
+    {
+        private A a = new A();
+        public void B1() { a.A1(); }
+        public void B2() { a.A2(); }
     }
 }
+
+
