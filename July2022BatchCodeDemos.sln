@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculatorWinFormsApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{9D6731A6-D544-4652-910F-E544A0A0EF5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMathDataLayer", "SimpleMathDataLayer\SimpleMathDataLayer.csproj", "{F2E1669F-C2CA-43BF-A2E5-56EC2ABCB830}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,6 +122,10 @@ Global
 		{9D6731A6-D544-4652-910F-E544A0A0EF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D6731A6-D544-4652-910F-E544A0A0EF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D6731A6-D544-4652-910F-E544A0A0EF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E1669F-C2CA-43BF-A2E5-56EC2ABCB830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E1669F-C2CA-43BF-A2E5-56EC2ABCB830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E1669F-C2CA-43BF-A2E5-56EC2ABCB830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E1669F-C2CA-43BF-A2E5-56EC2ABCB830}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -133,6 +139,7 @@ Global
 		{99A3CBB9-83F4-4324-9AA4-D49EDFB2785D} = {866202AF-BDAC-48C6-969B-FF4668D5A912}
 		{A6406841-1BA4-497C-9AD1-8A676193A8FD} = {866202AF-BDAC-48C6-969B-FF4668D5A912}
 		{9D6731A6-D544-4652-910F-E544A0A0EF5C} = {866202AF-BDAC-48C6-969B-FF4668D5A912}
+		{F2E1669F-C2CA-43BF-A2E5-56EC2ABCB830} = {866202AF-BDAC-48C6-969B-FF4668D5A912}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {664F96B1-40FB-4496-9BFA-F59A88B5A90C}

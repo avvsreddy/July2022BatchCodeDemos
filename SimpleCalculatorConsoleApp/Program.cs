@@ -1,4 +1,4 @@
-﻿
+﻿using SimpleMathLibrary;
 int fno;
 int sno;
 int sum = 0;
@@ -22,6 +22,15 @@ while (true)
     {
         Console.WriteLine("Enter only numbers");
     }
+    catch (InvalidPositiveNonZeroNumberException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+    catch (InvalidEvenNumberException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
     //catch (OverflowException ex)
     //{
     //    Console.WriteLine("Enter small int numbers only");
@@ -36,6 +45,6 @@ while (true)
     //}
     catch (Exception ex) // catch all 
     {
-        Console.WriteLine("Some error occured, try later");
+        Console.WriteLine(ex.Message);
     }
 }

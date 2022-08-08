@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SimpleMathDataLayer\SimpleMathDataLayer.csproj" />
-  </ItemGroup>
-
 </Project>
