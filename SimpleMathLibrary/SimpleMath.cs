@@ -1,11 +1,25 @@
-﻿
-using SimpleMathDataLayer;
+﻿using SimpleMathDataLayer;
 using SimpleMathLibrary;
 /// <summary>
 /// Use this class for calculating simple mathematical operations
 /// </summary>
 public class SimpleMath // back end
 {
+
+    IDbRepository repo = null;
+
+
+
+    public SimpleMath()
+    {
+        repo = new DbRepository();
+    }
+
+    public SimpleMath(IDbRepository repo)
+    {
+        this.repo = repo;
+    }
+
     /// <summary>
     /// Finds the sum of two numbers. atleast one number should be even
     /// </summary>
@@ -23,23 +37,8 @@ public class SimpleMath // back end
             throw new InvalidPositiveNonZeroNumberException("Enter atlease one positive non zero number");
 
         int sum = a + b;
-        DbRepository repo = new DbRepository();
-        try
-        {
-            repo.SaveData(a, b, sum);
-        }
-        catch (Exception ex)
-        {
-            ///////
-            /////
-            // log
-            // convert
-            // fix
-            throw ex;
-        }
+        //SimpleMathDataLayer.DbRepository repo = new SimpleMathDataLayer.DbRepository();
+        repo.SaveData(a, b, sum);
         return sum;
-
-
-
     }
 }

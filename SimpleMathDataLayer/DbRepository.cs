@@ -1,6 +1,12 @@
 ﻿namespace SimpleMathDataLayer
 {
-    public class DbRepository
+
+    public interface IDbRepository
+    {
+        void SaveData(int i1, int i2, int r);
+    }
+
+    public class DbRepository : IDbRepository
     {
         /// <summary>
         /// 
