@@ -2,18 +2,33 @@
 Account acc1 = new Account { AccountNo = 111, Balance = 5000 };
 
 acc1.alert += Notification.SendEmail;
+//acc1.Subscribe(Notification.SendEmail);
 Notification n = new Notification();
 acc1.alert += n.SendSMS;
+//acc1.Subscribe(n.SendSMS);
+//acc1.alert("your account has been deposited $999999999999999");
+acc1.alert -= Notification.SendEmail;
+acc1.alert += Notification.SendEmail;
+acc1.alert += n.WhatsApp;
 acc1.Deposit(1000);
-acc1.Withdraw(1000);
+//acc1.Withdraw(1000);
 Console.WriteLine($"Current Balance is {acc1.Balance}");
 
 delegate void Alert(string msg);
 class Account
 {
-    public Alert alert = null;
+    public event Alert alert = null;
     public int AccountNo { get; set; }
     public int Balance { get; set; }
+
+    //public void Subscribe(Alert alert)
+    //{
+    //    this.alert += alert;
+    //}
+    //public void Unsubscribe(Alert alert)
+    //{
+    //    this.alert -= alert;
+    //}
 
     public void Deposit(int amt)
     {
@@ -38,6 +53,11 @@ class Account
 class Notification
 {
 
+
+    public void WhatsApp(string msg)
+    {
+        Console.WriteLine($"WhatsApp: {msg}");
+    }
     public void SendSMS(string msg)
     {
         Console.WriteLine($"SMS: {msg}");
