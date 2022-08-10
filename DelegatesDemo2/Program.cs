@@ -11,6 +11,7 @@ acc1.alert -= Notification.SendEmail;
 acc1.alert += Notification.SendEmail;
 acc1.alert += n.WhatsApp;
 acc1.Deposit(1000);
+
 //acc1.Withdraw(1000);
 Console.WriteLine($"Current Balance is {acc1.Balance}");
 
@@ -32,6 +33,7 @@ class Account
 
     public void Deposit(int amt)
     {
+
 
         Balance += amt;
         //Notification.SendEmail($"Deposited {amt} into account {AccountNo}");
