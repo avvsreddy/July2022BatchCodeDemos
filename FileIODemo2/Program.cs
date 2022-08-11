@@ -21,10 +21,13 @@ while (choice != 3)
         {
             case 1:
                 Contact contact = CollectContactData();
-                repo.SaveContact(contact); break;
+                repo.SaveContact(contact);
+                Console.WriteLine("Contact saved....");
+                break;
             case 2:
                 List<Contact> contacts = repo.GetAllContacts();
-                DisplayAllContacts(contacts); break;
+                DisplayAllContacts(contacts);
+                break;
             default:
                 break;
         }
