@@ -42,6 +42,14 @@ class Program
 
         pMgr.ShowProcessList(p => p.WorkingSet64 >= 100 * 1024 * 1024);
 
+        // client 1
+
+        pMgr.ShowProcessList(p => true);
+
+        // client 2
+
+        pMgr.ShowProcessList(x => x.ProcessName.StartsWith("a"));
+
     }
 
     // client 1
