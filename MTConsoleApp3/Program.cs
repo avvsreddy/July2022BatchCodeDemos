@@ -1,4 +1,6 @@
-﻿namespace MTConsoleApp3
+﻿using System.Collections.Concurrent;
+
+namespace MTConsoleApp3
 {
     internal class Program
     {
@@ -13,12 +15,19 @@
     }
     class BigData
     {
-        public Stack<int> data = new Stack<int>();
+        //public Stack<int> data = new Stack<int>();
+        public ConcurrentStack<int> data = new ConcurrentStack<int>();
+        //[MethodImpl(MethodImplOptions.Synchronized)]
         public void Fill()
         {
             for (int i = 1; i <= 1000000; i++)
             {
+                //Monitor.Enter(this);
+                //lock (this)
+                //{
                 data.Push(i);
+                //}
+                //Monitor.Exit(this);
             }
         }
     }
