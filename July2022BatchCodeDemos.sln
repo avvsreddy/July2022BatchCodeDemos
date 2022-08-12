@@ -72,6 +72,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTDemo1", "MTDemo1\MTDemo1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTResponsiveWinFormsApp", "MTResponsiveWinFormsApp\MTResponsiveWinFormsApp.csproj", "{201F5D3A-537A-481A-87B0-90F866707EDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTConsoleApp3", "MTConsoleApp3\MTConsoleApp3.csproj", "{1A24B60D-994D-4FCA-B52E-E847C276C22B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -182,6 +184,10 @@ Global
 		{201F5D3A-537A-481A-87B0-90F866707EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{201F5D3A-537A-481A-87B0-90F866707EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{201F5D3A-537A-481A-87B0-90F866707EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A24B60D-994D-4FCA-B52E-E847C276C22B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A24B60D-994D-4FCA-B52E-E847C276C22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A24B60D-994D-4FCA-B52E-E847C276C22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A24B60D-994D-4FCA-B52E-E847C276C22B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +210,7 @@ Global
 		{F3922E4F-E28C-416E-AD40-EFED08B66FEA} = {FCAA38F3-A862-47EB-8170-BE757A7F6B84}
 		{A66578C7-8C22-4580-A5CC-017AACDF0BFA} = {114987CC-1A22-489E-B42F-4C811F80FF76}
 		{201F5D3A-537A-481A-87B0-90F866707EDE} = {114987CC-1A22-489E-B42F-4C811F80FF76}
+		{1A24B60D-994D-4FCA-B52E-E847C276C22B} = {114987CC-1A22-489E-B42F-4C811F80FF76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {664F96B1-40FB-4496-9BFA-F59A88B5A90C}
