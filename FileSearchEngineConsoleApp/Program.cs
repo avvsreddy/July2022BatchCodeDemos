@@ -18,6 +18,7 @@ namespace FileSearchEngineConsoleApp
             Console.WriteLine();
             Console.Write("Enter file name to search: ");
             string fileToSearch = Console.ReadLine();
+            Console.WriteLine($"Searching the file {fileToSearch} started...");
             //???
         }
     }
