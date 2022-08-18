@@ -10,5 +10,13 @@ namespace DBDemo1.Data
         Contact GetContact(int id);
 
         List<Contact> GetAllContacts();
+
+        void Update(Contact contactToUpdate);
+
+        List<Contact> GetContactsByLocation(string location);
+
+        Contact GetContactByName(string nameToSearch);
+
+        int GetContactCount();
     }
 }
