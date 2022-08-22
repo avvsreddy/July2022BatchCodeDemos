@@ -94,6 +94,21 @@ namespace DBDemo1.Data
 
         }
 
+        public Contact GetContactByName(string nameToSearch)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetContactCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Contact> GetContactsByLocation(string location)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Save(Contact contactToSave)
         {
             // Open DB Connection
@@ -114,6 +129,11 @@ namespace DBDemo1.Data
 
             // close the db connection
             conn.Close();
+        }
+
+        public void Update(Contact contactToUpdate)
+        {
+            throw new NotImplementedException();
         }
     }
 }
