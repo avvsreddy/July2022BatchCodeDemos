@@ -1,4 +1,6 @@
-﻿namespace LanguageEnhancements
+﻿using System.Xml.Linq;
+
+namespace LanguageEnhancements
 {
     class Program
     {
@@ -16,6 +18,25 @@
             //9. Show which catagory has costly product
             //10. Show which catagory has less products
             //11. Save all products into XML document	
+
+            // <products>
+            //  <product>
+            //        <productid>111</productid>
+            //        <name>IPhone x</name>
+            //        <price>70000</price>
+            //   <product>
+            //   <product>
+            //
+
+            //
+
+            XDocument xml = new XDocument(new XElement("products",
+                    from p in ProductsDB.GetProducts()
+                    select new XElement("product",
+                    new XElement("productid", p.ProductID), new XElement("name", p.Name), new XElement("price", p.Price)))
+            );
+
+            xml.Save("e:/products.xml");
 
 
 
