@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProductsCatalogApp.Data;
 
@@ -11,9 +12,10 @@ using ProductsCatalogApp.Data;
 namespace ProductsCatalogApp.Migrations
 {
     [DbContext(typeof(ProductsDbContext))]
-    partial class ProductsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220824065419_supplier")]
+    partial class supplier
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,28 +38,6 @@ namespace ProductsCatalogApp.Migrations
                     b.HasKey("CatagoryID");
 
                     b.ToTable("Catagories");
-                });
-
-            modelBuilder.Entity("ProductsCatalogApp.Entities.Person", b =>
-                {
-                    b.Property<int>("PersonID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonID"), 1L, 1);
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("PersonID");
-
-                    b.ToTable("People");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Person");
                 });
 
             modelBuilder.Entity("ProductsCatalogApp.Entities.Product", b =>
@@ -89,45 +69,35 @@ namespace ProductsCatalogApp.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("ProductsCatalogApp.Entities.Supplier", b =>
+                {
+                    b.Property<int>("SupplierID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierID"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SupplierID");
+
+                    b.ToTable("Suppliers");
+                });
+
             modelBuilder.Entity("ProductSupplier", b =>
                 {
                     b.Property<int>("ProductsProductID")
                         .HasColumnType("int");
 
-                    b.Property<int>("SuppliersPersonID")
+                    b.Property<int>("SuppliersSupplierID")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductsProductID", "SuppliersPersonID");
+                    b.HasKey("ProductsProductID", "SuppliersSupplierID");
 
-                    b.HasIndex("SuppliersPersonID");
+                    b.HasIndex("SuppliersSupplierID");
 
                     b.ToTable("ProductSupplier");
-                });
-
-            modelBuilder.Entity("ProductsCatalogApp.Entities.Customer", b =>
-                {
-                    b.HasBaseType("ProductsCatalogApp.Entities.Person");
-
-                    b.Property<string>("CustomerType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Discount")
-                        .HasColumnType("float");
-
-                    b.HasDiscriminator().HasValue("Customer");
-                });
-
-            modelBuilder.Entity("ProductsCatalogApp.Entities.Supplier", b =>
-                {
-                    b.HasBaseType("ProductsCatalogApp.Entities.Person");
-
-                    b.Property<string>("GST")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Rank")
-                        .HasColumnType("int");
-
-                    b.HasDiscriminator().HasValue("Supplier");
                 });
 
             modelBuilder.Entity("ProductsCatalogApp.Entities.Product", b =>
@@ -149,7 +119,7 @@ namespace ProductsCatalogApp.Migrations
 
                     b.HasOne("ProductsCatalogApp.Entities.Supplier", null)
                         .WithMany()
-                        .HasForeignKey("SuppliersPersonID")
+                        .HasForeignKey("SuppliersSupplierID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
