@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-KnowledgeHub.Web-2768B94E-0FE2-467E-93AA-C39E80936BB9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+  </ItemGroup>
+
+</Project>

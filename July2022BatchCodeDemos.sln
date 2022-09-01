@@ -104,7 +104,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsCatalogApp", "Produ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC Demos", "MVC Demos", "{A079C4D3-E790-4737-AF44-2C85E326BE18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMVCWebApplication", "HelloWorldMVCWebApplication\HelloWorldMVCWebApplication.csproj", "{C48B4924-6860-4A7D-A7EA-2D4D74D898A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldMVCWebApplication", "HelloWorldMVCWebApplication\HelloWorldMVCWebApplication.csproj", "{C48B4924-6860-4A7D-A7EA-2D4D74D898A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHub.Web", "KnowledgeHub.Web\KnowledgeHub.Web.csproj", "{9A1AC6CF-B139-4778-9AEB-2AFCBDF5391C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -264,6 +266,10 @@ Global
 		{C48B4924-6860-4A7D-A7EA-2D4D74D898A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C48B4924-6860-4A7D-A7EA-2D4D74D898A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C48B4924-6860-4A7D-A7EA-2D4D74D898A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1AC6CF-B139-4778-9AEB-2AFCBDF5391C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1AC6CF-B139-4778-9AEB-2AFCBDF5391C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1AC6CF-B139-4778-9AEB-2AFCBDF5391C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1AC6CF-B139-4778-9AEB-2AFCBDF5391C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -298,6 +304,7 @@ Global
 		{EA1ACD4C-EA2E-4E3D-A769-4FCC682B045F} = {EEAFB6E0-A49C-46A1-A32E-20C9DD873B0B}
 		{A21E0EEF-DB3E-4CEF-807C-65F36DA9D9F9} = {EEAFB6E0-A49C-46A1-A32E-20C9DD873B0B}
 		{C48B4924-6860-4A7D-A7EA-2D4D74D898A9} = {A079C4D3-E790-4737-AF44-2C85E326BE18}
+		{9A1AC6CF-B139-4778-9AEB-2AFCBDF5391C} = {A079C4D3-E790-4737-AF44-2C85E326BE18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {664F96B1-40FB-4496-9BFA-F59A88B5A90C}
