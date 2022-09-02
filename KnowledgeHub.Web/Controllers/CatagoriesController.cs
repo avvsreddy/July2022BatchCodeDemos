@@ -7,11 +7,19 @@ namespace KnowledgeHub.Web.Controllers
     public class CatagoriesController : Controller
     {
         KnowledgeHubDbContext db = new KnowledgeHubDbContext();
-        public IActionResult Index()
+        public IActionResult Index(string searchValue)
         {
+            List<Catagory> catagories = null;
 
-            // fetch the catagory details
-            List<Catagory> catagories = db.Catagories.ToList();
+            // fetch the catagory details with filter
+            if (searchValue != null && searchValue.Length != 0)
+            {
+                catagories = (from c in db.Catagories
+                              where c.Name.Contains(searchValue) || c.Description.Contains(searchValue)
+                              select c).ToList();
+            }
+            else
+                catagories = db.Catagories.ToList();
             //ViewBag.CatagoryData = catagories;
 
             //ViewData["CatagoryData"] = catagories;

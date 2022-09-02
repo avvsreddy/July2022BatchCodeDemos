@@ -6,6 +6,15 @@
 <h4>@TempData["Message"]</h4>
 <br />
 <a asp-action="Create" class="btn btn-primary">Create New Catagory</a><br />
+
+<form asp-action="Index" method="post">
+
+    <input type="text" name="searchValue" placeholder="Enter text to search" />
+    <input type="submit" name="btnSearch" value="Search" />
+
+
+</form>
+
 <table class="table table-bordered">
     <tr>
         <th>Name</th>
