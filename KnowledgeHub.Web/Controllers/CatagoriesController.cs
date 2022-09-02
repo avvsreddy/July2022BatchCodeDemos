@@ -69,6 +69,27 @@ namespace KnowledgeHub.Web.Controllers
             TempData["Message"] = $"Catagory {catagoryToDelete.Name} deleted successfully.";
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Catagory catagoryToEdit = db.Catagories.Find(id);
+            if (catagoryToEdit == null)
+                return NotFound();
+
+            return View(catagoryToEdit);
+        }
+        [HttpPost]
+        public IActionResult Edit(Catagory editedCatagory)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            db.Entry(editedCatagory).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.SaveChanges();
+            TempData["Message"] = $"Catagory {editedCatagory.Name} updated successfully.";
+            return RedirectToAction("Index");
+        }
 
     }
 }
