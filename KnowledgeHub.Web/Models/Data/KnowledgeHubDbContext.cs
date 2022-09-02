@@ -12,6 +12,7 @@ namespace KnowledgeHub.Web.Models.Data
         }
 
         public DbSet<Catagory> Catagories { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
     }
 }
