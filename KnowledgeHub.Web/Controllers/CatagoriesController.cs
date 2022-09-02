@@ -46,5 +46,29 @@ namespace KnowledgeHub.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Delete(int id)
+        {
+            Catagory catagoryToDelete = db.Catagories.Find(id);
+            if (catagoryToDelete == null)
+            {
+                return NotFound();
+            }
+            //db.Catagories.Remove(catagoryToDelete);
+            //db.SaveChanges();
+            //TempData["Message"] = $"Catagory {catagoryToDelete.Name} deleted successfully.";
+            //return RedirectToAction("Index");
+
+            return View("ConfirmDelete", catagoryToDelete);
+        }
+
+        public IActionResult ConfirmDelete(int id)
+        {
+            Catagory catagoryToDelete = db.Catagories.Find(id);
+            db.Catagories.Remove(catagoryToDelete);
+            db.SaveChanges();
+            TempData["Message"] = $"Catagory {catagoryToDelete.Name} deleted successfully.";
+            return RedirectToAction("Index");
+        }
+
     }
 }
