@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfLayoutsDemo.StackWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLayoutsDemo"
+        mc:Ignorable="d"
+        Title="StackWindow" Height="450" Width="800">
+    <StackPanel 
+        Orientation="Vertical" 
+        
+        Background="Yellow">
+        <Label Margin="10">Enter First Number</Label>
+        <TextBox Height="30" x:Name="fno" Margin="10"></TextBox>
+        <Label Margin="10">Enter Second Number</Label>
+
+        <TextBox Height="30" x:Name="sno" Margin="10"></TextBox>
+        <Button Margin="10" x:Name="btnSum">Sum</Button>
+        <Button Margin="10" x:Name="btnMul">Multiply</Button>
+    </StackPanel>
+</Window>

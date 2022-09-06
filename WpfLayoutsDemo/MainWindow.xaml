@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfLayoutsDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLayoutsDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <InkCanvas x:Name="ink1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="775" Height="361"></InkCanvas>
+        <Button x:Name="button" Content="Clear" Canvas.Left="393" Canvas.Top="395" Click="button_Click"/>
+    </Canvas>
+</Window>
