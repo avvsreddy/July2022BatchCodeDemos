@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "FileIODemo1": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:57358;http://localhost:57359"
+    }
+  }
+}

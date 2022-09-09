@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SimpleMathLibrary": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:57340;http://localhost:57341"
+    }
+  }
+}
