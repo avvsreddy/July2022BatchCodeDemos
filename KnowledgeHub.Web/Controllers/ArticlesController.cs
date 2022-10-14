@@ -1,5 +1,6 @@
 ﻿using KnowledgeHub.Web.Models.Data;
 using KnowledgeHub.Web.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -7,12 +8,16 @@ namespace KnowledgeHub.Web.Controllers
 {
     public class ArticlesController : Controller
     {
-        KnowledgeHubDbContext db = new KnowledgeHubDbContext();
-        public IActionResult Index()
+        KnowledgeHubDbContext db = null;
+
+        public ArticlesController(KnowledgeHubDbContext db)
         {
-            return View();
+            this.db = db;
         }
+
+
         [HttpGet]
+        [Authorize]
         public IActionResult Create()
         {
             ViewBag.CatagoryID = from c in db.Catagories
@@ -24,6 +29,7 @@ namespace KnowledgeHub.Web.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize]
         public IActionResult Create(Article article)
         {
             if (!ModelState.IsValid)

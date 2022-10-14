@@ -1,4 +1,5 @@
 using KnowledgeHub.Web.Data;
+using KnowledgeHub.Web.Models.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,8 +17,17 @@ namespace KnowledgeHub.Web
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            // inject the khdbcontext
+            builder.Services.AddScoped<ICatagoriesRepository, CatagoriesRepository>();
+            //builder.Services.AddSingleton<KnowledgeHubDbContext, KnowledgeHubDbContext>();
+            //builder.Services.AddTransient<KnowledgeHubDbContext, KnowledgeHubDbContext>();
+
+            // enable role based security
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultUI();
+
+
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             var app = builder.Build();
