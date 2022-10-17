@@ -1,8 +1,11 @@
-﻿namespace ProductsCatalogService.Model.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProductsCatalogService.Model.Entities
 {
     public class Product
     {
         public int ProductID { get; set; }
+        [Required]
         public string Name { get; set; }
         public int Price { get; set; }
         public string Catagory { get; set; }
