@@ -14,6 +14,7 @@ namespace ProductsCatalogService.Model.Data
         public void DeleteProduct(int id)
         {
             db.Products.Remove(db.Products.Find(id));
+            db.SaveChanges();
         }
 
         public Product GetProduct(int id)
@@ -24,6 +25,11 @@ namespace ProductsCatalogService.Model.Data
         public List<Product> GetProducts()
         {
             return db.Products.ToList();
+        }
+
+        public List<Product> GetProductsByAvailability()
+        {
+            return db.Products.Where(p => p.InStock).ToList();
         }
 
         public List<Product> GetProductsByBrand(string brand)

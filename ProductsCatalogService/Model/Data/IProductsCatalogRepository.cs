@@ -13,6 +13,8 @@ namespace ProductsCatalogService.Model.Data
         List<Product> GetProductsByColor(string color);
         List<Product> GetProductsByCountry(string country);
 
+        List<Product> GetProductsByAvailability();
+
         void DeleteProduct(int id);
         void UpdateProduct(Product product);
         void CreateProduct(Product product);
