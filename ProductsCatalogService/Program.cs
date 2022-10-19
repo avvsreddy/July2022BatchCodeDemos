@@ -1,4 +1,5 @@
 using Microsoft.AspNet.OData.Extensions;
+using ProductsCatalogService.Model.Data;
 
 namespace ProductsCatalogService
 {
@@ -9,6 +10,8 @@ namespace ProductsCatalogService
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddScoped<IProductsCatalogRepository, ProeductsCatalogEFRepository>();
 
             builder.Services.AddControllers().AddXmlSerializerFormatters().AddNewtonsoftJson();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

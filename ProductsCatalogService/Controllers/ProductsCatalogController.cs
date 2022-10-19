@@ -9,10 +9,16 @@ namespace ProductsCatalogService.Controllers
     [ApiController]
     public class ProductsCatalogController : ControllerBase
     {
-        IProductsCatalogRepository repo = new ProeductsCatalogEFRepository();
+        IProductsCatalogRepository repo = null;// new ProeductsCatalogEFRepository();
 
         //MVC...ProductsCatalog/GetProducts
         //Web API  GET .../api/ProductsCatalog
+
+        public ProductsCatalogController(IProductsCatalogRepository repo)
+        {
+            this.repo = repo;
+        }
+
 
         [HttpGet]
         [EnableQuery]
