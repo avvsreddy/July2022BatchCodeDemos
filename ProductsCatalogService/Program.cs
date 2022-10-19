@@ -1,3 +1,5 @@
+using Microsoft.AspNet.OData.Extensions;
+
 namespace ProductsCatalogService
 {
     public class Program
@@ -8,10 +10,12 @@ namespace ProductsCatalogService
 
             // Add services to the container.
 
-            builder.Services.AddControllers().AddXmlSerializerFormatters();
+            builder.Services.AddControllers().AddXmlSerializerFormatters().AddNewtonsoftJson();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddOData();
 
             var app = builder.Build();
 
@@ -24,10 +28,18 @@ namespace ProductsCatalogService
 
             app.UseHttpsRedirection();
 
+            app.UseRouting();
+
             app.UseAuthorization();
 
+            app.UseEndpoints(ep =>
+            {
+                ep.EnableDependencyInjection();
+                ep.Select().OrderBy().MaxTop(10).Filter().SkipToken().Count();
+                ep.MapControllers();
+            });
 
-            app.MapControllers();
+            //app.MapControllers();
 
             app.Run();
         }

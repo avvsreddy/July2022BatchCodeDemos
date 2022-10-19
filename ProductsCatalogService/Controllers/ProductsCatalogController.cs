@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Mvc;
 using ProductsCatalogService.Model.Data;
 using ProductsCatalogService.Model.Entities;
 
@@ -14,113 +15,114 @@ namespace ProductsCatalogService.Controllers
         //Web API  GET .../api/ProductsCatalog
 
         [HttpGet]
-        public List<Product> getassdsdf()
+        [EnableQuery]
+        public IQueryable<Product> getassdsdf()
         {
-            return repo.GetProducts();
+            return repo.GetProducts().AsQueryable();
         }
 
         // get products by id
         // GET ....api/productscatalog/234
 
-        [HttpGet]
-        [Route("{id}")]
-        public ActionResult<Product> GetProduct(int id)
-        {
-            var product = repo.GetProduct(id);
-            if (product == null)
-            {
-                // return 404
-                return NotFound();
+        //[HttpGet]
+        //[Route("{id}")]
+        //public ActionResult<Product> GetProduct(int id)
+        //{
+        //    var product = repo.GetProduct(id);
+        //    if (product == null)
+        //    {
+        //        // return 404
+        //        return NotFound();
 
-            }
-            // return 200 with data
-            return Ok(product);
-        }
+        //    }
+        //    // return 200 with data
+        //    return Ok(product);
+        //}
 
-        // design the suitable URI and create the action methods for the below
+        //// design the suitable URI and create the action methods for the below
 
-        // get products by color
-        // GET .../api/productscatalog/color/{color}
-        [HttpGet]
-        [Route("color/{color}")]
-        public ActionResult GetProductsByColor(string color)
-        {
-            var products = repo.GetProductsByColor(color);
-            if (products.Count == 0)
-                return NotFound(color);
-            return Ok(products);
-        }
-        // get products by country
-        [HttpGet]
-        [Route("country/{country}")]
-        public ActionResult GetProductsByCountry(string country)
-        {
-            var products = repo.GetProductsByCountry(country);
-            if (products.Count == 0)
-                return NotFound(country);
-            return Ok(products);
-        }
+        //// get products by color
+        //// GET .../api/productscatalog/color/{color}
+        //[HttpGet]
+        //[Route("color/{color}")]
+        //public ActionResult GetProductsByColor(string color)
+        //{
+        //    var products = repo.GetProductsByColor(color);
+        //    if (products.Count == 0)
+        //        return NotFound(color);
+        //    return Ok(products);
+        //}
+        //// get products by country
+        //[HttpGet]
+        //[Route("country/{country}")]
+        //public ActionResult GetProductsByCountry(string country)
+        //{
+        //    var products = repo.GetProductsByCountry(country);
+        //    if (products.Count == 0)
+        //        return NotFound(country);
+        //    return Ok(products);
+        //}
 
-        // get products by availability
-        [HttpGet]
-        [Route("available")]
-        public ActionResult GetProductsByAvailability()
-        {
-            var products = repo.GetProductsByAvailability();
-            if (products.Count == 0)
-                return NotFound();
-            return Ok(products);
-        }
-        // get producgs by brand
-        [HttpGet]
-        [Route("brand/{brand}")]
-        public ActionResult GetProductsByBrand(string brand)
-        {
-            var products = repo.GetProductsByBrand(brand);
-            if (products.Count == 0)
-                return NotFound();
-            return Ok(products);
-        }
-        // get products by catagory
-        [HttpGet]
-        [Route("catagory/{cat}")]
-        public ActionResult GetProductsByCagatory(string cat)
-        {
-            var products = repo.GetProductsByCatagory(cat);
-            if (products.Count == 0)
-                return NotFound();
-            return Ok(products);
-        }
-        // get products by price
-        [HttpGet]
-        [Route("price/max/{max}/min/{min}")]
-        public ActionResult GetProductsByPrice(int min, int max)
-        {
-            var products = repo.GetProducts().Where(p => p.Price >= min && p.Price <= max).ToList();
-            if (products.Count == 0)
-                return NotFound();
-            return Ok(products);
-        }
-        // get costliest product
-        [HttpGet]
-        [Route("constlies")]
-        public ActionResult GetCostliestProducts()
-        {
-            var product = repo.GetProducts().OrderByDescending(p => p.Price).FirstOrDefault();
-            if (product == null)
-                return NotFound();
-            return Ok(product);
-        }
-        // get cheapest product
-        [HttpGet]
-        [Route("cheapest")]
-        public ActionResult GetCheapestProducts()
-        {
-            var product = repo.GetProducts().OrderBy(p => p.Price).FirstOrDefault();
-            if (product == null)
-                return NotFound();
-            return Ok(product);
-        }
+        //// get products by availability
+        //[HttpGet]
+        //[Route("available")]
+        //public ActionResult GetProductsByAvailability()
+        //{
+        //    var products = repo.GetProductsByAvailability();
+        //    if (products.Count == 0)
+        //        return NotFound();
+        //    return Ok(products);
+        //}
+        //// get producgs by brand
+        //[HttpGet]
+        //[Route("brand/{brand}")]
+        //public ActionResult GetProductsByBrand(string brand)
+        //{
+        //    var products = repo.GetProductsByBrand(brand);
+        //    if (products.Count == 0)
+        //        return NotFound();
+        //    return Ok(products);
+        //}
+        //// get products by catagory
+        //[HttpGet]
+        //[Route("catagory/{cat}")]
+        //public ActionResult GetProductsByCagatory(string cat)
+        //{
+        //    var products = repo.GetProductsByCatagory(cat);
+        //    if (products.Count == 0)
+        //        return NotFound();
+        //    return Ok(products);
+        //}
+        //// get products by price
+        //[HttpGet]
+        //[Route("price/max/{max}/min/{min}")]
+        //public ActionResult GetProductsByPrice(int min, int max)
+        //{
+        //    var products = repo.GetProducts().Where(p => p.Price >= min && p.Price <= max).ToList();
+        //    if (products.Count == 0)
+        //        return NotFound();
+        //    return Ok(products);
+        //}
+        //// get costliest product
+        //[HttpGet]
+        //[Route("constlies")]
+        //public ActionResult GetCostliestProducts()
+        //{
+        //    var product = repo.GetProducts().OrderByDescending(p => p.Price).FirstOrDefault();
+        //    if (product == null)
+        //        return NotFound();
+        //    return Ok(product);
+        //}
+        //// get cheapest product
+        //[HttpGet]
+        //[Route("cheapest")]
+        //public ActionResult GetCheapestProducts()
+        //{
+        //    var product = repo.GetProducts().OrderBy(p => p.Price).FirstOrDefault();
+        //    if (product == null)
+        //        return NotFound();
+        //    return Ok(product);
+        //}
 
         // delete product by id
 
